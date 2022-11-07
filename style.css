@@ -1,0 +1,682 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-padding-top: 80px;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+#header{
+    align-items: center;
+    background-color: rgb(162, 208, 247);
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo{
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+    margin-left: 5px;
+    width: 200px;
+}
+
+#header div{
+    display: flex;
+}
+
+.tel-icon{
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+    margin-right: 30px;
+    width: 40px;
+}
+
+/* ヘッダーのナビ部分 */
+  
+.header__nav{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-100%);
+    background-color: rgb(162, 208, 247);
+    z-index: 9999;
+    transition: all 0.6s
+}
+  
+.nav-items{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    width: 100%;
+}
+  
+  /* ナビのリンク */
+
+.nav-items__item a{
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+  
+.nav-items__item:last-child a{
+    margin-bottom: 0;
+} 
+ 
+  /* ハンバーガーメニュー */
+  
+.header__hamburger{
+    width: 48px;
+}
+  
+.hamburger{
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 9999;
+}
+  
+  /* ハンバーガーメニューの線 */
+.hamburger span{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    transition: ease .4s;
+    display: block;
+    right: 10px;
+}
+  
+.hamburger span:nth-child(1){
+    top: 0;
+}
+  
+.hamburger span:nth-child(2){
+    margin: 8px 0;
+}
+  
+.hamburger span:nth-child(3){
+    top: 0;
+}
+  
+  /* ハンバーガーメニュークリック後のスタイル */
+
+.header__nav.active{
+    transform: translateX(0);
+    position: fixed;
+}
+  
+.hamburger.active span:nth-child(1){
+    top: 5px;
+    transform: rotate(45deg);
+}
+  
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+  
+.hamburger.active span:nth-child(3){
+    top: -15px;
+    transform: rotate(-45deg);
+}
+
+.explanation{
+    background-image: url(img/水色背景.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #555;
+    font-size: 25px;
+    line-height: 2;
+    padding: 20px;
+    text-align: center;
+}
+
+.mainvisual img{
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+.check{
+    color: #555;
+    font-size: 25px;
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+.number1{
+    color: rgb(36, 36, 241);
+}
+
+.big1{
+    color: rgb(36, 36, 241);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.bold{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 20px 20px 20px;
+    text-align: center;
+}
+
+.wrap{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.contents{
+    border-bottom: solid 1px #555;
+    display: flex;
+    height: 500px;
+    margin-top: 10px;
+}
+
+.contents-img{
+    margin: 10px;
+    width: 40%;
+}
+
+.contents-img img{
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.contents div{
+    font-size: 25px;
+    margin: 10px;
+    width: 60%;
+}
+
+.office-work{
+    color: rgb(96, 250, 199);
+    font-weight: bold;
+}
+
+.homepage{
+    color: rgb(37, 204, 37);
+    font-weight: bold;
+}
+
+.design{
+    color: rgb(212, 88, 39);
+    font-weight: bold;
+}
+
+.small{
+    font-size: 20px;
+}
+
+.movie{
+    color: rgb(240, 46, 46);
+    font-weight: bold;
+}
+
+.nft{
+    color: rgb(105, 62, 223);
+    font-weight: bold;
+}
+
+.number2{
+    color: rgb(35, 182, 30);
+}
+
+.big2{
+    color: rgb(35, 182, 30);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.support-img img{
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+.type-a-office{
+    color: rgb(35, 182, 30);
+    font-size: 35px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.office-text{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 20px 20px 20px;
+}
+
+.type-a-about{
+    color: rgb(57, 179, 235);
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0 0 20px 10px;
+}
+
+.about-text{
+    background-color: rgb(57, 179, 235);
+    border-radius: 25px;
+    color: #fff;
+    font-size: 25px;
+    margin: 0 10px;
+    padding: 20px;
+}
+
+.number3{
+    color: rgb(241, 36, 162);
+}
+
+.big3{
+    color: rgb(241, 36, 162);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.anxiety-img img{
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+.consultation-support{
+    color: rgb(241, 36, 162);
+    font-size: 35px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.consultation-text{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 20px 20px 20px;
+}
+
+.consultation-about{
+    background-color: rgb(57, 179, 235);
+    border-radius: 25px;
+    color: #fff;
+    font-size: 25px;
+    margin: 0 10px;
+    padding: 20px;
+}
+
+.flow{
+    background-color: rgb(57, 179, 235);
+    border-radius: 25px;
+    margin: 20px 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.flow a{
+    color: #fff;
+    font-size: 25px;
+}
+
+#access p{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.access-letter{
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.access-color{
+    color: rgb(245, 186, 60);
+    font-size: 35px;
+}
+
+.access-flex{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.access-flex-sp{
+    width: 45%;
+}
+
+.access-flex-sp img{
+    height: auto;
+    margin: 0 10px;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;   
+}
+
+.access-flex-sp div{
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    justify-content: space-between;
+    margin: 0 10px;
+    width: 100%;
+}
+
+.access-text p{
+    text-align: center;
+}
+
+.map{
+    width: 45%;
+}
+
+iframe{
+    height: 500px;
+    width: 100%;
+}
+
+.post{
+    font-size: 25px;
+    margin: 0 10px 20px 10px;
+}
+
+.visit{
+    color: rgb(57, 179, 235);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tel{
+    display: flex;
+    justify-content: center;
+}
+
+.tel img{
+    width: 40px;
+}
+
+.tel p{
+    font-size: 40px;
+}
+
+.contact dl{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact dt{
+    font-size: 20px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.contact dd input{
+    width: 100%;
+    padding: 10px 0;
+}
+
+.contact dd textarea{
+    width: 100%;
+    height: 150px;
+    padding: 10px 0;
+}
+
+.contact .button {
+    text-align: center;
+}
+
+.contact .button input {
+    width: 80%;
+    background-color: #555;
+    border: solid 1px #555;
+    color: white;
+    padding: 10px 0;
+    margin: 10px 0 20px 0;
+}
+
+#footer{
+    background-color: rgb(162, 208, 247);
+}
+
+#footer p{
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 520px){
+
+    .nav-items__item a{
+        font-size: 30px;
+    }
+
+    .explanation{
+        font-size: 15px;
+        text-align: start;
+    }
+
+    .mainvisual img{
+        height: auto;
+    }
+
+    .check{
+        font-size: 20px;
+        margin: 20px 0 0 20px;
+        text-align: start;
+    }
+
+    .big1{
+        font-size: 25px;
+    }
+
+    .bold{
+        font-size: 15px;
+        text-align: start;
+    }
+
+    .contents{
+        height: 200px;
+    }
+
+    .contents-img img{
+        height: 120px;
+    }
+
+    .contents div{
+        font-size: 12px;
+    }
+
+    .small{
+        font-size: 10px;
+    }
+
+    .big2{
+        font-size: 25px;
+    }
+
+    .support-img img{
+        height: auto;
+    }
+
+    .type-a-office{
+        font-size: 20px;
+    }
+
+    .office-text{
+        font-size: 15px;
+    }
+
+    .type-a-about{
+        font-size: 20px;
+    }
+    
+    .about-text{
+        font-size: 15px;
+    }
+
+    .big3{
+        font-size: 25px;
+    }
+
+    .anxiety-img img{
+        height: auto;
+    }
+
+    .consultation-support{
+        font-size: 20px;
+    }
+    
+    .consultation-text{
+        font-size: 15px;
+    }
+    
+    .consultation-about{
+        font-size: 15px;
+    }
+
+    .flow a{
+        font-size: 23px;
+    }
+
+    #access p{
+        font-size: 12px;
+    }
+
+    .access-letter{
+        font-size: 20px;
+    }
+
+    .access-color{
+        font-size: 25px;
+    }
+
+    .access-flex{
+        display: block;
+    }
+    
+    .access-flex-sp{
+        display: flex;
+        width: 100%;
+    }
+    
+    .access-flex-sp img{
+        width: 50%;
+    }
+    
+    .access-flex-sp div{
+        font-size: 12px;
+        width: 50%;
+    }
+    
+    .map{
+        width: 100%;
+    }
+
+    iframe{
+        height: 200px;
+    }
+
+    .post{
+        font-size: 15px;
+    }
+    
+}
+
+/*flow.html*/
+
+.flow-use{
+    background-image: url(img/水色背景.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #555;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+.flow-step{
+    margin-bottom: 50px;
+}
+
+.balloon1 {
+    background: #b4aeff;
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    padding: 30px 10px;
+    position: relative;
+}
+  
+.balloon1:before {
+    border: 30px solid transparent;
+    border-top: 30px solid #b4aeff;
+    content: "";
+    left: 50%;
+    margin-left: -30px;
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+}
+
+.balloon2 {
+    background: #7670ce;
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    padding: 30px 10px;
+    position: relative;
+}
+  
+.balloon2:before {
+    border: 30px solid transparent;
+    border-top: 30px solid #7670ce;
+    content: "";
+    left: 50%;
+    margin-left: -30px;
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+}
+
+.step{
+    position: absolute;
+}
+
+.step2{
+    position: absolute;
+}
+
+.text-center{
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 520px){
+
+    .step2{
+        position: static;
+    }
+
+}
